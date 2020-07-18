@@ -11,3 +11,33 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.hide-on-large {
+  @media only screen and (min-width: 992px) {
+    display: none;
+  }
+}
+
+.hide-on-small {
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
+}
+
+.carousel .carousel-inner{
+height:500px
+}
+.carousel-inner .carousel-item img{
+min-height:200px;
+//prevent it from stretch in screen size < than 768px
+// object-fit:cover;
+object-position: center;
+}
+
+@media(max-width:768px){
+.carousel .carousel-inner{
+//prevent it from adding a white space between carousel and container elements
+height:auto
+ }
+}
+

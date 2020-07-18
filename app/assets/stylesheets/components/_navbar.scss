@@ -10,3 +10,34 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.hide-on-mobile {
+  @media only screen and (max-width: 991px) {
+    background-color: white !important;
+    color: rgb(80, 80, 80) !important;
+    position: relative;
+    div {
+      > p {
+        > span {
+          color: #3a3a3c !important;
+        }
+      }
+      > ul {
+        > div {
+          > div {
+            > button {
+              color: rgba(0, 0, 0, 0.5) !important;
+            }
+          }
+        }
+        > div {
+          > li {
+            > a {
+              color: rgba(0, 0, 0, 0.5) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
