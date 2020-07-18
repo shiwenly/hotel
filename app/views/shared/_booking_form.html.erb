@@ -1,0 +1,12 @@
+<div class="hide-on-small">
+  <%= form_for :search, defaults: { required: false }, url:"", method: "GET", html: { class: '' } do |f| %>
+    <div class="d-flex align-items-center justify-content-center my-4" style="width: 100%">
+      <section class="" style="">
+        <%= f.text_field :query, label: false, placeholder: "Arrival", input_html: {}, style: "width: 12em; border-radius: 4px; border-style: none; height: 3em; margin-left: auto; margin-right: 10px; left: 0; right: 0; padding-left: 16px; opacity: 0.8;" %>
+        <%= f.text_field :query, label: false, placeholder: "Departure", input_html: {}, style: "width: 12em; border-radius: 4px; border-style: none; height: 3em; margin-left: 10px; margin-right: 10px; left: 20px; right: 10px; padding-left: 16px; opacity: 0.8;" %>
+        <%= f.text_field :query, label: false, placeholder: "Nb of guests", input_html: {}, style: "width: 12em; border-radius: 4px; border-style: none; height: 3em; margin-left: 10px; margin-right: 20px; left: 0; right: 0; padding-left: 16px; opacity: 0.8;" %>
+        <%= f.submit "Book now", class: "btn-yellow-mustard-big my-3" %>
+      </section>
+    </div>
+  <% end %>
+</div>

@@ -5,23 +5,24 @@
   </div>
 </div>
 <div class="hide-on-large" style="height: 360px; background-size: cover; background-position: center; background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url(https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80">
-  <div class="container d-flex align-items-center justify-content-center" style="height: 360px">
+  <div class="text-center pt-3 hide-on-large">
+    <%= link_to "BOOK NOW", "", class: "nav-link hide-on-mobile nav-white", style:"", class:"btn btn-transparent-bold-white" %>
+  </div>
+  <div class="container d-flex align-items-center justify-content-center" style="height: 240px">
     <h1 style="color: white; font-family: Simply Rounded; font-size: 24px; letter-spacing: 1px; text-align: center">Modern Living Style in the Heart of Medan</h1>
   </div>
 </div>
-<div class="container">
-  <div class="hide-on-small">
-    <%= form_for :search, defaults: { required: false }, url:"", method: "GET", html: { class: '' } do |f| %>
-      <div class="d-flex align-items-center justify-content-center my-4" style="width: 100%">
-        <section class="" style="">
-          <%= f.text_field :query, label: false, placeholder: "Arrival", input_html: {}, style: "width: 12em; border-radius: 4px; border-style: none; height: 3em; margin-left: auto; margin-right: 10px; left: 0; right: 0; padding-left: 16px; opacity: 0.8;" %>
-          <%= f.text_field :query, label: false, placeholder: "Departure", input_html: {}, style: "width: 12em; border-radius: 4px; border-style: none; height: 3em; margin-left: 10px; margin-right: 10px; left: 20px; right: 10px; padding-left: 16px; opacity: 0.8;" %>
-          <%= f.text_field :query, label: false, placeholder: "Nb of guests", input_html: {}, style: "width: 12em; border-radius: 4px; border-style: none; height: 3em; margin-left: 10px; margin-right: 20px; left: 0; right: 0; padding-left: 16px; opacity: 0.8;" %>
-          <%= f.submit "Book now", class: "btn-yellow-mustard-big my-3" %>
-        </section>
-      </div>
-    <% end %>
-  </div>
-  <h5 class="text-center my-4">Welcome to Le petit Paris</h5>
+<div class="container my-5">
+  <%= render 'shared/booking_form' %>
+  <h5 class="text-center mt-5">Welcome to Le petit Paris</h5>
   <p class="text-center my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, a doloremque sequi rerum, architecto officiis quaerat est doloribus aperiam excepturi reprehenderit voluptas sapiente officia amet. Quo officia hic aspernatur! Blanditiis.</p>
 </div>
+<%= render 'shared/rooms' %>
+<div class="text-center py-5" style="background-color: black">
+  <h3 style="color: white">Reserve Your Stay</h3>
+  <%= render 'shared/booking_form' %>
+  <div class="text-center pt-3 hide-on-large">
+    <%= link_to "BOOK NOW", "", class: "nav-link hide-on-mobile nav-white", style:"", class:"btn btn-transparent-bold-white" %>
+  </div>
+</div>
+<%= render 'shared/attractions' %>
